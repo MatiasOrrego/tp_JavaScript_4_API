@@ -1,4 +1,4 @@
-const link = "https://geek-jokes.sameerkumar.website/api?format=json"
+const link = "https://rickandmortyapi.com/api/character"
 const elContainer = document.getElementById("container")
 
 const procesarFetch = async (link) => {
@@ -10,13 +10,13 @@ const procesarFetch = async (link) => {
         console.log("Hubo un error")
     }
 }
-/*procesarFetch(link)
+procesarFetch(link)
     .then((info) => {
-        info.result.forEach((element) => {
+        info.results.forEach((element) => {
             elContainer.innerHTML += `
-            <div class = "personajes" <img src="${element.image}"/>
-            <h2>${element.name}</h2>
-            <div/>`
-            
+            <div class="personajes">
+                <img src="${element.image}"/>
+                <h2>${element.name}</h2>
+            </div>`;
         });
-    })*/
+    });
