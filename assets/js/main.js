@@ -4,8 +4,8 @@ const elContainer = document.getElementById("container")
 const procesarFetch = async (link) => {
     try {
         const respuesta = await fetch(link) 
-        const sameerkumar = await respuesta.json()
-        return sameerkumar
+        const info = await respuesta.json()
+        return info
     } catch (error) {
         console.log("Hubo un error")
     }
