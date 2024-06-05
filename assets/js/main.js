@@ -14,8 +14,3 @@ const cargarGif = async (url) => {
 }
 
 cargarGif(url);
-
-cambiarGatoBtn.addEventListener("click", () => {
-    elContainer.innerHTML = "";
-    cargarGif(url);
-})
