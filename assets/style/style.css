@@ -1,5 +1,17 @@
-.personajes{
+main{
     display: flex;
     justify-content: center;
-    width: 100px;
+    align-items: center;
+    margin-top: 12%;
+}
+
+#contenedor img{
+    border: 20px solid #ff003d;   
+}
+body{
+    background-color: #2a2829;
+}
+.btn{
+    background-color: #e6dddf;
+    color: #9c0a0a;
 }

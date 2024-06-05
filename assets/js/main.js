@@ -1,22 +1,21 @@
-const link = "https://rickandmortyapi.com/api/character"
-const elContainer = document.getElementById("container")
 
-const procesarFetch = async (link) => {
+const url = "https://cataas.com/cat/gif"
+const elContainer = document.getElementById("contenedor")
+const cambiarGatoBtn = document.getElementById("cambiarGatoBtn");
+
+const cargarGif = async (url) => {
     try {
-        const respuesta = await fetch(link) 
-        const info = await respuesta.json()
-        return info
+        const img = document.createElement('img');
+        img.src = url;
+        elContainer.appendChild(img);
     } catch (error) {
-        console.log("Hubo un error")
+        console.log("Hubo un error", error)
     }
 }
-procesarFetch(link)
-    .then((info) => {
-        info.results.forEach((element) => {
-            elContainer.innerHTML += `
-            <div class="personajes">
-                <img src="${element.image}"/>
-                <h2>${element.name}</h2>
-            </div>`;
-        });
-    });
+
+cargarGif(url);
+
+cambiarGatoBtn.addEventListener("click", () => {
+    elContainer.innerHTML = "";
+    cargarGif(url);
+})
